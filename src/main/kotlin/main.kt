@@ -6,7 +6,7 @@ const val MAXIMUM_DISCOUNT = (100 - 5) / 100.toDouble()    // Максималь
 const val ADDITIONAL_DISCOUNT = (100 - 1) / 100.toDouble()    // Доп. скидка
 
 fun main() {
-    var TotalPurchasesForAllTime: Int = 16000
+    val totalPurchasesForAllTime: Int = 16000
     print("Введите количество дисков: ")
     val itemCount = readLine()!!.toInt()
     val amountRub = itemCount * ITEM_PRICE
@@ -18,7 +18,7 @@ fun main() {
     } else {
         amountRub
     }
-    val meloman = if (TotalPurchasesForAllTime > 15_000) {
+    val meloman = if (totalPurchasesForAllTime > 15_000) {
         discountedAmountRub.toDouble() * ADDITIONAL_DISCOUNT
     } else {
         discountedAmountRub
